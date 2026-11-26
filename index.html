@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background: black;
+    color: red;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 100px 15px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+#timer {
+    font-size: 55px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>⚠ YOU'VE BEEN HACKED!</h1>
+
+<p></p>
+<p>Your information was accessed or stolen.</p>
+
+<h2 id="timer">5</h2>
+
+<p>Redirecting to Google Meet...</p>
+
+<a href="https://meet.google.com/gou-mmsf-xbw">
+    Join Google Meet
+</a>
+
+<script>
+let count = 5;
+
+let countdown = setInterval(function() {
+
+    count--;
+
+    document.getElementById("timer").innerText = count;
+
+    if (count <= 0) {
+        clearInterval(countdown);
+
+        window.location.href =
+        "https://meet.google.com/gou-mmsf-xbw";
+
+    }
+
+}, 1000);
+</script>
+
+</body>
+</html>
